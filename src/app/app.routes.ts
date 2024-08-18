@@ -8,6 +8,11 @@ export const routes: Routes = [
     pathMatch: "full",
   },
   {
+    path: "sound",
+    loadComponent: () =>
+      import("./page/sound/sound.component").then((c) => c.SoundComponent),
+  },
+  {
     path: "**",
     redirectTo: "",
   },
