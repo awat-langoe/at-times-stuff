@@ -11,7 +11,11 @@ import { RouterLink } from "@angular/router";
 export class HomeComponent {
   protected readonly homeLinks: HomeLink[] = [
     {
-      title: "Sound",
+      title: "… Dev",
+      routerLink: "/dev",
+    },
+    {
+      title: "… Sound",
       routerLink: "/sound",
     },
   ];
