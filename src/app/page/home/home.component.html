@@ -1,1 +1,7 @@
-<a routerLink="/sound">Sound</a>
+<div class="home-link-grid">
+  @for (homeLink of homeLinks; track homeLink.routerLink) {
+    <button class="home-link-button" [routerLink]="homeLink.routerLink">
+      {{ homeLink.title }}
+    </button>
+  }
+</div>

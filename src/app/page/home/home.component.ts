@@ -8,4 +8,16 @@ import { RouterLink } from "@angular/router";
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
 })
-export class HomeComponent {}
+export class HomeComponent {
+  protected readonly homeLinks: HomeLink[] = [
+    {
+      title: "Sound",
+      routerLink: "/sound",
+    },
+  ];
+}
+
+export interface HomeLink {
+  title: string;
+  routerLink: string;
+}
