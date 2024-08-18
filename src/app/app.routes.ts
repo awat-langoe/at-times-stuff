@@ -9,6 +9,12 @@ export const routes: Routes = [
     pathMatch: "full",
   },
   {
+    path: "dev",
+    title: "At Times Dev",
+    loadComponent: () =>
+      import("./page/dev/dev.component").then((c) => c.DevComponent),
+  },
+  {
     path: "sound",
     title: "At Times Sound",
     loadComponent: () =>
