@@ -1,7 +1,7 @@
-<div class="home-link-grid">
+<ul>
   @for (homeLink of homeLinks; track homeLink.routerLink) {
-    <button class="home-link-button" [routerLink]="homeLink.routerLink">
-      {{ homeLink.title }}
-    </button>
+    <li>
+      <a [routerLink]="homeLink.routerLink">{{ homeLink.title }}</a>
+    </li>
   }
-</div>
+</ul>
