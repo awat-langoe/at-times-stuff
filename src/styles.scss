@@ -1,9 +1,9 @@
 html {
   --app-color-surface: #eae6ff;
   --app-color-on-surface: black;
-  --app-color-primary: #9580ff;
+  --app-color-primary: #8066ff;
   --app-color-on-primary: black;
-  --app-color-secondary: #ffaa80;
+  --app-color-secondary: #eeff99;
   --app-color-on-secondary: black;
 }
 
@@ -16,7 +16,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   background-color: var(--app-color-surface);
-  color: var(black);
+  color: var(--app-color-on-surface);
 }
 
 h1,
