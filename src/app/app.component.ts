@@ -7,6 +7,7 @@ import {
   NavigationEnd,
   Router,
   RouterLink,
+  RouterLinkActive,
   RouterOutlet,
 } from "@angular/router";
 import { filter, map } from "rxjs/operators";
@@ -14,7 +15,7 @@ import { filter, map } from "rxjs/operators";
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [AsyncPipe, RouterLink, RouterOutlet],
+  imports: [AsyncPipe, RouterLink, RouterLinkActive, RouterOutlet],
   providers: [BreakpointObserver],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",

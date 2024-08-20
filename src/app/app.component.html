@@ -7,8 +7,14 @@
     <nav class="app-nav-rail">
       <ul class="app-nav-rail-list">
         @for (sidenavLink of sidenavLinks; track sidenavLink.route) {
-          <li>
-            <a [routerLink]="sidenavLink.route">{{ sidenavLink.title }}</a>
+          <li class="app-nav-rail-list-item">
+            <a
+              class="app-nav-rail-list-item-link"
+              routerLinkActive="selected-text"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="sidenavLink.route"
+              >{{ sidenavLink.title }}</a
+            >
           </li>
         }
       </ul>
@@ -17,8 +23,14 @@
     <nav class="app-nav-drawer">
       <ul class="app-nav-drawer-list">
         @for (sidenavLink of sidenavLinks; track sidenavLink.route) {
-          <li>
-            <a [routerLink]="sidenavLink.route">{{ sidenavLink.title }}</a>
+          <li class="app-nav-drawer-list-item">
+            <a
+              class="app-nav-drawer-list-item-link"
+              routerLinkActive="selected-text"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="sidenavLink.route"
+              >{{ sidenavLink.title }}</a
+            >
           </li>
         }
       </ul>

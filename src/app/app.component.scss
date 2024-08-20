@@ -38,7 +38,14 @@
   border-right: 0.125rem solid var(--app-color-on-surface);
 
   &-list {
-    padding-inline-start: 2rem;
+    padding-inline-start: 0;
+    list-style-type: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &-item-link {
+      padding: 0.5rem 0.25rem;
+    }
   }
 }
 
@@ -54,7 +61,14 @@
   font-size: 0.75rem;
 
   &-list {
-    padding-inline-start: 1.5rem;
+    padding-inline-start: 0;
+    list-style-type: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &-item-link {
+      padding: 0.5rem 0.25rem;
+    }
   }
 }
 

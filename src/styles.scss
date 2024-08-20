@@ -31,3 +31,19 @@ h6 {
 p {
   margin: 0 0 12px;
 }
+
+.selected-text {
+  color: var(--app-color-surface);
+  background-color: var(--app-color-on-surface);
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  font-weight: 700;
+
+  &:focus,
+  &:hover {
+    @extend .selected-text;
+  }
+}
