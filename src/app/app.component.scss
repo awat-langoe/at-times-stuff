@@ -16,7 +16,7 @@
   grid-area: header;
   background-color: var(--app-color-primary);
   color: var(--app-color-on-primary);
-  border-bottom: 0.125rem solid black;
+  border-bottom: 0.125rem solid var(--app-color-on-surface);
 
   &-title {
     transform: scaleX(1.33);
@@ -30,9 +30,27 @@
   width: 22.5rem;
   background-color: var(--app-color-secondary);
   color: var(--app-color-on-secondary);
-  border-right: 0.125rem solid black;
+  border-right: 0.125rem solid var(--app-color-on-surface);
 }
 
 .app-main {
   grid-area: main;
+}
+
+@media (max-width: 37.5rem) {
+  :host {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "sidenav"
+      "main";
+    height: 100%;
+  }
+
+  .app-sidenav {
+    width: auto;
+    border-right: 0;
+    border-bottom: 0.125rem solid var(--app-color-on-surface);
+  }
 }
