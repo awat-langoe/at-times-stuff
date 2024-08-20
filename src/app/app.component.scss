@@ -1,14 +1,10 @@
 .app-header {
   display: flex;
   align-items: center;
-  height: 3.5rem;
+  height: 4rem;
   padding: 0 1rem;
   background-color: var(--app-color-primary);
   color: var(--app-color-on-primary);
-  border-top: 0.0625rem solid white;
-  border-right: 0.0625rem solid black;
-  border-bottom: 0.0625rem solid black;
-  border-left: 0.0625rem solid white;
 }
 
 .app-header-title {
