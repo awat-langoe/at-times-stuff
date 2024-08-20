@@ -1,11 +1,8 @@
 :host {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "header header header header"
-    "sidenav main main main";
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  overflow-y: hidden;
 }
 
 .app-header {
@@ -13,7 +10,7 @@
   align-items: center;
   height: 4rem;
   padding: 0 1rem;
-  grid-area: header;
+  flex-shrink: 0;
   background-color: var(--app-color-primary);
   color: var(--app-color-on-primary);
   border-bottom: 0.125rem solid var(--app-color-on-surface);
@@ -23,6 +20,14 @@
     transform-origin: left;
     margin: 0;
   }
+}
+
+.app-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "sidenav main main main";
+  flex-grow: 1;
+  overflow-y: hidden;
 }
 
 .app-sidenav {
@@ -35,22 +40,26 @@
 
 .app-main {
   grid-area: main;
+  overflow-y: auto;
 }
 
 @media (max-width: 37.5rem) {
-  :host {
+  .app-content {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
-      "header"
       "sidenav"
       "main";
-    height: 100%;
+    overflow-y: auto;
   }
 
   .app-sidenav {
     width: auto;
     border-right: 0;
     border-bottom: 0.125rem solid var(--app-color-on-surface);
+  }
+
+  .app-main {
+    overflow-y: initial;
   }
 }
