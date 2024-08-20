@@ -7,6 +7,17 @@ html {
   --app-color-on-secondary: black;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    --app-color-surface: #0c0b0d;
+    --app-color-on-surface: white;
+    --app-color-primary: #4429cc;
+    --app-color-on-primary: white;
+    --app-color-secondary: #608000;
+    --app-color-on-secondary: white;
+  }
+}
+
 html,
 body {
   height: 100%;
