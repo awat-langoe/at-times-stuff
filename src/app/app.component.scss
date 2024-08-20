@@ -25,17 +25,34 @@
 .app-content {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "sidenav main main main";
+  grid-template-areas: "nav main";
   flex-grow: 1;
   overflow-y: hidden;
 }
 
-.app-sidenav {
-  grid-area: sidenav;
+.app-nav-drawer {
+  grid-area: nav;
   width: 22.5rem;
   background-color: var(--app-color-secondary);
   color: var(--app-color-on-secondary);
   border-right: 0.125rem solid var(--app-color-on-surface);
+
+  &-list {
+    padding-inline-start: 2rem;
+  }
+}
+
+.app-nav-rail {
+  grid-area: nav;
+  width: 5rem;
+  background-color: var(--app-color-secondary);
+  color: var(--app-color-on-secondary);
+  border-right: 0.125rem solid var(--app-color-on-surface);
+  font-size: 0.75rem;
+
+  &-list {
+    padding-inline-start: 1.5rem;
+  }
 }
 
 .app-main {
@@ -43,17 +60,17 @@
   overflow-y: auto;
 }
 
-@media (max-width: 37.5rem) {
+@media (max-width: 599.98px) {
   .app-content {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
-      "sidenav"
+      "nav"
       "main";
     overflow-y: auto;
   }
 
-  .app-sidenav {
+  .app-nav-drawer {
     width: auto;
     border-right: 0;
     border-bottom: 0.125rem solid var(--app-color-on-surface);

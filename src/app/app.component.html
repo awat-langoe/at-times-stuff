@@ -3,15 +3,27 @@
 </header>
 
 <div class="app-content">
-  <nav class="app-sidenav">
-    <ul>
-      @for (sidenavLink of sidenavLinks; track sidenavLink.route) {
-        <li>
-          <a [routerLink]="sidenavLink.route">{{ sidenavLink.title }}</a>
-        </li>
-      }
-    </ul>
-  </nav>
+  @if (isMediumOrLargeWindow$ | async) {
+    <nav class="app-nav-rail">
+      <ul class="app-nav-rail-list">
+        @for (sidenavLink of sidenavLinks; track sidenavLink.route) {
+          <li>
+            <a [routerLink]="sidenavLink.route">{{ sidenavLink.title }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+  } @else {
+    <nav class="app-nav-drawer">
+      <ul class="app-nav-drawer-list">
+        @for (sidenavLink of sidenavLinks; track sidenavLink.route) {
+          <li>
+            <a [routerLink]="sidenavLink.route">{{ sidenavLink.title }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+  }
 
   <main class="app-main">
     <router-outlet />

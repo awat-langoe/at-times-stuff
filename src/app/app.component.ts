@@ -1,3 +1,4 @@
+import { BreakpointObserver, BreakpointState } from "@angular/cdk/layout";
 import { AsyncPipe } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
@@ -14,6 +15,7 @@ import { filter, map } from "rxjs/operators";
   selector: "app-root",
   standalone: true,
   imports: [AsyncPipe, RouterLink, RouterOutlet],
+  providers: [BreakpointObserver],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
 })
@@ -52,6 +54,11 @@ export class AppComponent {
       route: "/sound",
     },
   ];
+
+  private readonly breakpointObserver = inject(BreakpointObserver);
+  protected readonly isMediumOrLargeWindow$ = this.breakpointObserver
+    .observe("(min-width: 600px) and (max-width: 1199.98px)")
+    .pipe(map((breakpointState: BreakpointState) => breakpointState.matches));
 }
 
 export interface SidenavLink {
