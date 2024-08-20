@@ -43,6 +43,9 @@
 }
 
 .app-nav-rail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   grid-area: nav;
   width: 5rem;
   background-color: var(--app-color-secondary);
