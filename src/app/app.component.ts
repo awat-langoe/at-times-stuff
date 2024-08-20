@@ -5,6 +5,7 @@ import {
   Event,
   NavigationEnd,
   Router,
+  RouterLink,
   RouterOutlet,
 } from "@angular/router";
 import { filter, map } from "rxjs/operators";
@@ -12,7 +13,7 @@ import { filter, map } from "rxjs/operators";
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [AsyncPipe, RouterOutlet],
+  imports: [AsyncPipe, RouterLink, RouterOutlet],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
 })
@@ -36,4 +37,24 @@ export class AppComponent {
       return title;
     }),
   );
+
+  protected readonly sidenavLinks: SidenavLink[] = [
+    {
+      title: "Home",
+      route: "/",
+    },
+    {
+      title: "… Dev",
+      route: "/dev",
+    },
+    {
+      title: "… Sound",
+      route: "/sound",
+    },
+  ];
+}
+
+export interface SidenavLink {
+  title: string;
+  route: string;
 }

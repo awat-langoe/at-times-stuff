@@ -2,6 +2,16 @@
   <h1 class="app-header-title">{{ headerTitle$ | async }}</h1>
 </header>
 
-<main>
+<nav class="app-sidenav">
+  <ul>
+    @for (sidenavLink of sidenavLinks; track sidenavLink.route) {
+      <li>
+        <a [routerLink]="sidenavLink.route">{{ sidenavLink.title }}</a>
+      </li>
+    }
+  </ul>
+</nav>
+
+<main class="app-main">
   <router-outlet />
 </main>

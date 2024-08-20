@@ -1,14 +1,38 @@
+:host {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header header header"
+    "sidenav main main main";
+  height: 100%;
+}
+
 .app-header {
   display: flex;
   align-items: center;
   height: 4rem;
   padding: 0 1rem;
+  grid-area: header;
   background-color: var(--app-color-primary);
   color: var(--app-color-on-primary);
+  border-bottom: 0.125rem solid black;
+
+  &-title {
+    transform: scaleX(1.33);
+    transform-origin: left;
+    margin: 0;
+  }
 }
 
-.app-header-title {
-  transform: scaleX(1.33);
-  transform-origin: left;
-  margin: 0;
+.app-sidenav {
+  grid-area: sidenav;
+  width: 22.5rem;
+  background-color: var(--app-color-secondary);
+  color: var(--app-color-on-secondary);
+  border-right: 0.125rem solid black;
+}
+
+.app-main {
+  grid-area: main;
 }
