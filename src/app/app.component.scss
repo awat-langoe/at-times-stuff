@@ -33,8 +33,8 @@
 .app-nav-drawer {
   grid-area: nav;
   width: 22.5rem;
-  background-color: var(--app-color-secondary);
-  color: var(--app-color-on-secondary);
+  background-color: var(--app-color-surface);
+  color: var(--app-color-on-surface);
   border-right: 0.125rem solid var(--app-color-on-surface);
 
   &-list {
@@ -55,8 +55,8 @@
   justify-content: center;
   grid-area: nav;
   width: 5rem;
-  background-color: var(--app-color-secondary);
-  color: var(--app-color-on-secondary);
+  background-color: var(--app-color-surface);
+  color: var(--app-color-on-surface);
   border-right: 0.125rem solid var(--app-color-on-surface);
   font-size: 0.75rem;
 

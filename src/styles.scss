@@ -1,9 +1,9 @@
 html {
   --app-color-surface: #eae6ff;
   --app-color-on-surface: black;
-  --app-color-primary: #8066ff;
-  --app-color-on-primary: black;
-  --app-color-secondary: #eeff99;
+  --app-color-primary: #6940ff;
+  --app-color-on-primary: white;
+  --app-color-secondary: #17e644;
   --app-color-on-secondary: black;
 }
 
@@ -11,10 +11,10 @@ html {
   html {
     --app-color-surface: #0c0b0d;
     --app-color-on-surface: white;
-    --app-color-primary: #4429cc;
+    --app-color-primary: #2c00cc;
     --app-color-on-primary: white;
-    --app-color-secondary: #608000;
-    --app-color-on-secondary: white;
+    --app-color-secondary: #00cc2c;
+    --app-color-on-secondary: black;
   }
 }
 
@@ -44,8 +44,8 @@ p {
 }
 
 .selected-text {
-  color: var(--app-color-surface);
-  background-color: var(--app-color-on-surface);
+  color: var(--app-color-on-secondary);
+  background-color: var(--app-color-secondary);
 }
 
 a {
