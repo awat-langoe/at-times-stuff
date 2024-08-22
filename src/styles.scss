@@ -1,19 +1,19 @@
 html {
-  --app-color-surface: #eae6ff;
+  --app-color-surface: #fcfaff;
   --app-color-on-surface: black;
-  --app-color-primary: #6940ff;
-  --app-color-on-primary: white;
-  --app-color-secondary: #17e644;
+  --app-color-primary: #a666ff;
+  --app-color-on-primary: black;
+  --app-color-secondary: #bfff66;
   --app-color-on-secondary: black;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
-    --app-color-surface: #0c0b0d;
-    --app-color-on-surface: white;
-    --app-color-primary: #2c00cc;
+    --app-color-surface: #0d0c0d;
+    --app-color-on-surface: #fcfaff;
+    --app-color-primary: #6a00ff;
     --app-color-on-primary: white;
-    --app-color-secondary: #00cc2c;
+    --app-color-secondary: #95ff00;
     --app-color-on-secondary: black;
   }
 }
