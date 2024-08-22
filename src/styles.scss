@@ -8,6 +8,10 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
   html {
     --app-color-surface: #0d0c0d;
     --app-color-on-surface: #fcfaff;
