@@ -13,7 +13,7 @@
   flex-shrink: 0;
   background-color: var(--app-color-primary);
   color: var(--app-color-on-primary);
-  border-bottom: 0.125rem solid var(--app-color-on-surface);
+  border-bottom: 0.25rem solid var(--app-color-on-surface);
 
   &-title {
     transform: scaleX(1.33);
@@ -35,16 +35,17 @@
   width: 22.5rem;
   background-color: var(--app-color-surface);
   color: var(--app-color-on-surface);
-  border-right: 0.125rem solid var(--app-color-on-surface);
+  border-right: 0.25rem solid var(--app-color-on-surface);
 
   &-list {
+    margin-block: 0;
     padding-inline-start: 0;
     list-style-type: none;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 
     &-item-link {
-      padding: 0.5rem 0.25rem;
+      display: block;
+      padding: 1rem;
+      text-transform: uppercase;
     }
   }
 }
@@ -54,20 +55,21 @@
   flex-direction: column;
   justify-content: center;
   grid-area: nav;
-  width: 5rem;
+  width: 8rem;
   background-color: var(--app-color-surface);
   color: var(--app-color-on-surface);
-  border-right: 0.125rem solid var(--app-color-on-surface);
+  border-right: 0.25rem solid var(--app-color-on-surface);
   font-size: 0.75rem;
 
   &-list {
+    margin-block: 0;
     padding-inline-start: 0;
     list-style-type: none;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 
     &-item-link {
-      padding: 0.5rem 0.25rem;
+      display: block;
+      padding: 1rem;
+      text-transform: uppercase;
     }
   }
 }
@@ -90,7 +92,7 @@
   .app-nav-drawer {
     width: auto;
     border-right: 0;
-    border-bottom: 0.125rem solid var(--app-color-on-surface);
+    border-bottom: 0.25rem solid var(--app-color-on-surface);
   }
 
   .app-main {
