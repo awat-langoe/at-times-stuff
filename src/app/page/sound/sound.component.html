@@ -1,1 +1,15 @@
-<p>sound works!</p>
+<ul>
+  @for (sound of sounds; track sound.src) {
+    <li>
+      <button (click)="onSoundClick(sound)">{{ sound.title }}</button>
+    </li>
+  }
+</ul>
+
+<span class="sound-spacer"></span>
+
+@defer (when currentSound !== undefined) {
+  <app-audio-player [title]="currentSound?.title">
+    <audio appAudioPlayerSource autoplay [src]="currentSound?.src"></audio>
+  </app-audio-player>
+}

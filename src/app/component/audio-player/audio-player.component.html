@@ -1,0 +1,199 @@
+<p style="margin-bottom: 0">{{ title }}</p>
+
+<input
+  #seekSlider
+  class="audio-player-seek-slider"
+  type="range"
+  min="0"
+  step="any"
+  style="width: 100%"
+  [valueAsNumber]="time"
+  [max]="duration?.toString()"
+  [disabled]="duration === undefined"
+  (change)="onSeekSliderChange(seekSlider.valueAsNumber)"
+  (input)="onSeekSliderInput()"
+/>
+
+<div class="audio-player-playing-container">
+  @if (paused) {
+    <button
+      (click)="onPlayClick()"
+      [disabled]="duration === undefined"
+      style="width: 3rem; height: 3rem"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 24 24"
+      >
+        <path
+          id="triangle"
+          d="M6 20V4L18 12L6 20Z"
+          fill="var(--app-color-on-surface)"
+        />
+      </svg>
+    </button>
+  } @else {
+    <button
+      (click)="onPauseClick()"
+      [disabled]="duration === undefined"
+      style="width: 3rem; height: 3rem"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 24 24"
+      >
+        <rect
+          id="rectangle-left"
+          x="6"
+          y="5"
+          width="4"
+          height="14"
+          fill="var(--app-color-on-surface)"
+        />
+        <rect
+          id="rectangle-right"
+          x="14"
+          y="5"
+          width="4"
+          height="14"
+          fill="var(--app-color-on-surface)"
+        />
+      </svg>
+    </button>
+  }
+
+  @if (duration !== undefined) {
+    <p style="margin-bottom: 0">
+      {{ time * 1000 | date: "mm:ss" : "UTC" }} /
+      {{ duration * 1000 | date: "mm:ss" : "UTC" }}
+    </p>
+  }
+</div>
+
+<div class="audio-player-volume-container">
+  <button class="audio-player-volume-button" (click)="onMuteClick()">
+    @if (muted) {
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 24 24"
+      >
+        <path
+          id="speaker"
+          d="M4 15V9H7L12 5V19L7 15H4Z"
+          fill="var(--app-color-on-surface)"
+        />
+        <path
+          id="cross"
+          d="M19.5 9L14 15M14 9L19.5 15"
+          stroke="var(--app-color-on-surface)"
+          stroke-width="2"
+        />
+      </svg>
+    } @else {
+      @if (volume === 1) {
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="speaker"
+            d="M4 15V9H7L12 5V19L7 15H4Z"
+            fill="var(--app-color-on-surface)"
+          />
+          <path
+            id="line-left"
+            d="M14 8C16 10 16 14 14 16"
+            fill="none"
+            stroke="var(--app-color-on-surface)"
+            stroke-width="2"
+          />
+          <path
+            id="line-right"
+            d="M17 6C20 9 20 15 17 18"
+            fill="none"
+            stroke="var(--app-color-on-surface)"
+            stroke-width="2"
+          />
+        </svg>
+      } @else if (volume === 0) {
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="speaker"
+            d="M4 15V9H7L12 5V19L7 15H4Z"
+            fill="var(--app-color-on-surface)"
+          />
+          <path
+            id="line-left"
+            d="M14 8C16 10 16 14 14 16"
+            fill="none"
+            stroke="var(--app-color-on-surface)"
+            stroke-opacity="0.38"
+            stroke-width="2"
+          />
+          <path
+            id="line-right"
+            d="M17 6C20 9 20 15 17 18"
+            fill="none"
+            stroke="var(--app-color-on-surface)"
+            stroke-opacity="0.38"
+            stroke-width="2"
+          />
+        </svg>
+      } @else {
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="speaker"
+            d="M4 15V9H7L12 5V19L7 15H4Z"
+            fill="var(--app-color-on-surface)"
+          />
+          <path
+            id="line-left"
+            d="M14 8C16 10 16 14 14 16"
+            fill="none"
+            stroke="var(--app-color-on-surface)"
+            stroke-width="2"
+          />
+          <path
+            id="line-right"
+            d="M17 6C20 9 20 15 17 18"
+            fill="none"
+            stroke="var(--app-color-on-surface)"
+            stroke-opacity="0.38"
+            stroke-width="2"
+          />
+        </svg>
+      }
+    }
+  </button>
+
+  <input
+    #volumeSlider
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    class="audio-player-volume-slider"
+    [valueAsNumber]="muted ? 0 : volume"
+    (input)="onVolumeSliderChange(volumeSlider.valueAsNumber)"
+  />
+</div>
+
+<ng-content select="appAudioPlayerSource" />

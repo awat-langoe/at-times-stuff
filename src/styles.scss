@@ -1,6 +1,8 @@
 html {
   --app-color-surface: #fcfaff;
   --app-color-on-surface: black;
+  --app-color-surface-variant: #e3e1e6;
+  --app-color-on-surface-variant: black;
   --app-color-primary: #a666ff;
   --app-color-on-primary: black;
   --app-color-secondary: #bfff66;
@@ -15,6 +17,8 @@ html {
   html {
     --app-color-surface: #0d0c0d;
     --app-color-on-surface: #fcfaff;
+    --app-color-surface-variant: #1a181a;
+    --app-color-on-surface-variant: #e3e1e6;
     --app-color-primary: #6a00ff;
     --app-color-on-primary: white;
     --app-color-secondary: #95ff00;
