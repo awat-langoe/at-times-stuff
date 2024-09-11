@@ -12,12 +12,12 @@ import { AudioPlayerComponent } from "../../component/audio-player/audio-player.
 export class SoundComponent {
   protected sounds: Sound[] = [
     {
-      src: "https://file-examples.com/storage/fefda3519566d3360a0efb3/2017/11/file_example_MP3_700KB.mp3",
-      title: "Example MP3 700KB",
+      src: "https://filesamples.com/samples/audio/mp3/sample2.mp3",
+      title: "Sample 2",
     },
     {
-      src: "https://file-examples.com/storage/fefda3519566d3360a0efb3/2017/11/file_example_MP3_1MG.mp3",
-      title: "Example MP3 1MB",
+      src: "https://filesamples.com/samples/audio/mp3/sample4.mp3",
+      title: "Sample 4",
     },
   ];
 
