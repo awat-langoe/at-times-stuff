@@ -1,0 +1,37 @@
+.dev-article {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.dev-projects-container {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
+}
+
+.card {
+  background-color: var(--app-color-surface-variant);
+  color: var(--app-color-on-surface-variant);
+  text-decoration: none;
+  font-weight: initial;
+  transition: 0.3s cubic-bezier(0.2, 0, 0, 1);
+
+  &:hover {
+    background-color: var(--app-color-secondary);
+    color: var(--app-color-on-secondary);
+  }
+
+  &-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1.5rem;
+  }
+
+  &-content-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}

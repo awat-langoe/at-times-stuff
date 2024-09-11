@@ -1,1 +1,13 @@
-<p>dev works!</p>
+<article class="dev-article" role="navigation">
+  <div class="dev-projects-container">
+    @for (devProject of devProjects; track devProject.id) {
+      <a class="card" target="_blank" [href]="devProject.url">
+        <div class="card-content-container">
+          <span class="card-content-title">{{ devProject.title }}</span>
+
+          <span>{{ devProject.description }}</span>
+        </div>
+      </a>
+    }
+  </div>
+</article>
