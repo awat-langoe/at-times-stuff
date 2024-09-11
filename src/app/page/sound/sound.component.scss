@@ -1,9 +1,15 @@
 :host {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-.sound-spacer {
-  flex: 1 1 auto;
+.sound-container {
+  flex: 1;
+}
+
+.sound-article {
+  max-width: 64rem;
+  padding: 1rem;
+  margin: 0 auto;
 }
