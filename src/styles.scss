@@ -60,6 +60,7 @@ a {
   display: inline-block;
   color: inherit;
   font-weight: 700;
+  transition: 0.3s cubic-bezier(0.2, 0, 0, 1);
 
   &:focus,
   &:hover {
