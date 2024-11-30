@@ -11,9 +11,9 @@
   height: 4rem;
   padding: 0 1rem;
   flex-shrink: 0;
-  background-color: var(--app-color-primary);
-  color: var(--app-color-on-primary);
-  border-bottom: 0.25rem solid var(--app-color-on-surface);
+  background-color: var(--app-color-surface);
+  color: var(--app-color-on-surface);
+  border-bottom: 0.125rem solid var(--app-color-on-surface);
 
   &-title {
     transform: scaleX(1.33);
@@ -35,7 +35,7 @@
   width: 22.5rem;
   background-color: var(--app-color-surface);
   color: var(--app-color-on-surface);
-  border-right: 0.25rem solid var(--app-color-on-surface);
+  border-right: 0.125rem solid var(--app-color-on-surface);
 
   &-list {
     margin-block: 0;
@@ -58,7 +58,7 @@
   width: 8rem;
   background-color: var(--app-color-surface);
   color: var(--app-color-on-surface);
-  border-right: 0.25rem solid var(--app-color-on-surface);
+  border-right: 0.125rem solid var(--app-color-on-surface);
   font-size: 0.75rem;
 
   &-list {
@@ -92,7 +92,7 @@
   .app-nav-drawer {
     width: auto;
     border-right: 0;
-    border-bottom: 0.25rem solid var(--app-color-on-surface);
+    border-bottom: 0.125rem solid var(--app-color-on-surface);
   }
 
   .app-main {
