@@ -1,13 +1,15 @@
 <article class="dev-article" role="navigation">
   <div class="dev-projects-container">
     @for (devProject of devProjects; track devProject.id) {
-      <a class="card" target="_blank" [href]="devProject.url">
-        <div class="card-content-container">
-          <span class="card-content-title">{{ devProject.title }}</span>
+      <app-card class="card">
+        <span class="card-content-title">{{ devProject.title }}</span>
 
-          <span>{{ devProject.description }}</span>
-        </div>
-      </a>
+        <span>{{ devProject.description }}</span>
+
+        <span class="card-content-spacer"></span>
+
+        <a target="_blank" [href]="devProject.url">GitHub</a>
+      </app-card>
     }
   </div>
 </article>
