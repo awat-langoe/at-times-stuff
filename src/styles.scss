@@ -1,12 +1,12 @@
 html {
-  --app-color-surface: #fcfaff;
-  --app-color-on-surface: black;
-  --app-color-surface-variant: #e3e1e6;
-  --app-color-on-surface-variant: black;
-  --app-color-primary: #a666ff;
-  --app-color-on-primary: black;
-  --app-color-secondary: #bfff66;
-  --app-color-on-secondary: black;
+  --app-color-surface: #f9fbfb;
+  --app-color-on-surface: #161d1d;
+  --app-color-surface-variant: #e2e9e9;
+  --app-color-on-surface-variant: #415858;
+  --app-color-primary: #1fadad;
+  --app-color-on-primary: #ffffff;
+  --app-color-secondary: #297aa3;
+  --app-color-on-secondary: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,14 +15,14 @@ html {
   }
 
   html {
-    --app-color-surface: #0d0c0d;
-    --app-color-on-surface: #fcfaff;
-    --app-color-surface-variant: #1a181a;
-    --app-color-on-surface-variant: #e3e1e6;
-    --app-color-primary: #6a00ff;
-    --app-color-on-primary: white;
-    --app-color-secondary: #95ff00;
-    --app-color-on-secondary: black;
+    --app-color-surface: #0d1212;
+    --app-color-on-surface: #e2e9e9;
+    --app-color-surface-variant: #415858;
+    --app-color-on-surface-variant: #c4d4d4;
+    --app-color-primary: #a8f0f0;
+    --app-color-on-primary: #0f5757;
+    --app-color-secondary: #add6eb;
+    --app-color-on-secondary: #143d52;
   }
 }
 
