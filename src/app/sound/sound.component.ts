@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { AudioPlayerSourceDirective } from "../component/audio-player/audio-player-source.directive";
-import { AudioPlayerComponent } from "../component/audio-player/audio-player.component";
+import { AudioPlayerSourceDirective } from "../shared/audio-player/audio-player-source.directive";
+import { AudioPlayerComponent } from "../shared/audio-player/audio-player.component";
 
 @Component({
   selector: "app-sound",
